@@ -19,6 +19,7 @@
             bindings = <&kp>, <&kp>;
 
             quick-tap-ms = <200>;
+            hold-trigger-on-release;
         };
     };
 
