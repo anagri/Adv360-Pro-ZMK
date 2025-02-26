@@ -89,52 +89,6 @@
             #binding-cells = <0>;
             mods = <(MOD_RALT)>;
         };
-
-        mm_click_left: mm_click_left {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MM_CLICK_LEFT";
-            bindings = <&kp HOME>, <&mm_safe_left>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RALT)>;
-        };
-
-        mm_click_right: mm_click_right {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MM_CLICK_RIGHT";
-            bindings = <&kp END>, <&mm_safe_right>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RALT)>;
-        };
-    };
-
-    macros {
-        mm_safe_left: mm_safe_left {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_release>,
-                <&kp RALT>,
-                <&macro_tap>,
-                <&mkp LCLK>,
-                <&macro_pause_for_release>;
-
-            label = "MM_SAFE_LEFT";
-        };
-
-        mm_safe_right: mm_safe_right {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_release>,
-                <&kp RALT>,
-                <&macro_tap>,
-                <&mkp RCLK>,
-                <&macro_pause_for_release>;
-
-            label = "MM_SAFE_RIGHT";
-        };
     };
 
     keymap {
@@ -154,11 +108,11 @@
         fn {
             display-name = "Fn";
             bindings = <
-&trans  &trans        &trans        &trans        &trans        &trans        &trans                                                &trans  &trans          &trans         &trans         &trans           &trans   &trans
-&trans  &kp F1        &kp F2        &kp F3        &kp F4        &kp F5        &trans                                                &none   &kp F6          &kp F7         &kp F8         &kp F9           &kp F10  &kp F11
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &trans  &trans  &trans      &trans     &trans         &trans  &mm_left        &mm_down       &mm_up         &mm_right        &trans   &kp F12
-&trans  &kp NUMBER_6  &kp NUMBER_7  &kp N8        &kp NUMBER_9  &kp NUMBER_0                  &trans      &trans                            &mm_click_left  &mm_scroll_dn  &mm_scroll_up  &mm_click_right  &trans   &trans
-&trans  &trans        &trans        &trans        &trans                      &trans  &trans  &trans      &kp RSHFT  &kp RIGHT_ALT  &trans                  &trans         &trans         &trans           &trans   &trans
+&trans  &trans        &trans        &trans        &trans        &trans        &trans                                                &trans    &trans     &trans         &trans         &trans     &trans   &trans
+&trans  &kp F1        &kp F2        &kp F3        &kp F4        &kp F5        &trans                                                &none     &kp F6     &kp F7         &kp F8         &kp F9     &kp F10  &kp F11
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &trans  &trans  &trans      &trans     &trans         &kp HOME  &mm_left   &mm_down       &mm_up         &mm_right  &kp END  &kp F12
+&trans  &kp NUMBER_6  &kp NUMBER_7  &kp N8        &kp NUMBER_9  &kp NUMBER_0                  &trans      &trans                              &mkp LCLK  &mm_scroll_dn  &mm_scroll_up  &mkp RCLK  &trans   &trans
+&trans  &trans        &trans        &trans        &trans                      &trans  &trans  &trans      &kp RSHFT  &kp RIGHT_ALT  &trans               &trans         &trans         &trans     &trans   &trans
             >;
         };
 
