@@ -93,7 +93,7 @@
         mm_click_left: mm_click_left {
             compatible = "zmk,behavior-mod-morph";
             label = "MM_CLICK_LEFT";
-            bindings = <&kp HOME>, <&mkp LCLK>;
+            bindings = <&kp HOME>, <&mm_safe_left>;
 
             #binding-cells = <0>;
             mods = <(MOD_RALT)>;
@@ -102,10 +102,38 @@
         mm_click_right: mm_click_right {
             compatible = "zmk,behavior-mod-morph";
             label = "MM_CLICK_RIGHT";
-            bindings = <&kp END>, <&mkp RCLK>;
+            bindings = <&kp END>, <&mm_safe_right>;
 
             #binding-cells = <0>;
             mods = <(MOD_RALT)>;
+        };
+    };
+
+    macros {
+        mm_safe_left: mm_safe_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_release>,
+                <&kp RALT>,
+                <&macro_tap>,
+                <&mkp LCLK>,
+                <&macro_pause_for_release>;
+
+            label = "MM_SAFE_LEFT";
+        };
+
+        mm_safe_right: mm_safe_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_release>,
+                <&kp RALT>,
+                <&macro_tap>,
+                <&mkp RCLK>,
+                <&macro_pause_for_release>;
+
+            label = "MM_SAFE_RIGHT";
         };
     };
 
