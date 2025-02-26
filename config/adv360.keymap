@@ -44,6 +44,69 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        mm_right: mm_right {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_RIGHT";
+            bindings = <&kp RIGHT>, <&mmv MOVE_RIGHT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_up: mm_up {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_UP";
+            bindings = <&kp UP_ARROW>, <&mmv MOVE_UP>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_down: mm_down {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_DOWN";
+            bindings = <&kp DOWN_ARROW>, <&mmv MOVE_DOWN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_scroll_dn: mm_scroll_dn {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_SCROLL_DN";
+            bindings = <&kp PAGE_DOWN>, <&msc SCRL_DOWN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_scroll_up: mm_scroll_up {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_SCROLL_UP";
+            bindings = <&kp PG_UP>, <&msc SCRL_UP>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_click_left: mm_click_left {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_CLICK_LEFT";
+            bindings = <&kp HOME>, <&mkp LCLK>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_click_right: mm_click_right {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_CLICK_RIGHT";
+            bindings = <&kp END>, <&mkp RCLK>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -52,32 +115,22 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&trans     &kp N1      &kp N2       &kp N3      &kp N4             &kp N5  &trans                                                     &mo 4      &kp N6  &kp N7              &kp N8      &kp N9       &kp N0         &trans
+&trans     &kp N1      &kp N2       &kp N3      &kp N4             &kp N5  &trans                                                     &mo 3      &kp N6  &kp N7              &kp N8      &kp N9       &kp N0         &trans
 &trans     &kp Q       &kp W        &kp E       &kp R              &kp T   &none                                                      &none      &kp Y   &kp U               &kp I       &kp O        &kp P          &kp BSLH
 &kp GRAVE  &hm LGUI A  &hm LCTRL S  &hm LALT D  &hm_shift LSHFT F  &kp G   &kp MINUS  &trans         &trans       &trans  &trans      &kp EQUAL  &kp H   &hm_shift RSHIFT J  &hm RALT K  &hm RCTRL L  &hm RGUI SEMI  &kp SQT
 &trans     &kp Z       &kp X        &kp C       &kp V              &kp B                             &kp TAB      &trans                         &kp N   &kp M               &kp COMMA   &kp DOT      &kp FSLH       &kp DEL
-&trans     &trans      &trans       &trans      &trans                     &kp SPACE  &kp BACKSPACE  &mo 1        &mo 2   &kp ESCAPE  &kp ENTER          &trans              &trans      &kp LBKT     &kp RBKT       &trans
+&trans     &trans      &trans       &trans      &trans                     &kp SPACE  &kp BACKSPACE  &mo 1        &mo 0   &kp ESCAPE  &kp ENTER          &trans              &trans      &kp LBKT     &kp RBKT       &trans
             >;
         };
 
         fn {
             display-name = "Fn";
             bindings = <
-&trans  &trans        &trans        &trans        &trans        &trans        &trans                                         &trans  &trans    &trans         &trans        &trans     &trans   &trans
-&trans  &kp F1        &kp F2        &kp F3        &kp F4        &kp F5        &trans                                         &none   &kp F6    &kp F7         &kp F8        &kp F9     &kp F10  &kp F11
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &trans  &trans  &trans      &trans     &trans  &trans  &mm_left  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &trans   &kp F12
-&trans  &kp NUMBER_6  &kp NUMBER_7  &kp N8        &kp NUMBER_9  &kp NUMBER_0                  &trans      &trans                     &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &trans   &trans
-&trans  &trans        &trans        &trans        &trans                      &trans  &trans  &trans      &kp RSHFT  &trans  &trans            &trans         &trans        &trans     &trans   &trans
-            >;
-        };
-
-        mouse {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                         &trans     &trans          &trans          &trans        &trans           &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                         &trans     &trans          &trans          &trans        &trans           &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans     &trans     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                        &trans          &msc SCRL_DOWN  &msc SCRL_UP  &trans           &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &mkp RCLK  &mkp LCLK                  &trans          &trans        &trans           &trans  &trans
+&trans  &trans        &trans        &trans        &trans        &trans        &trans                                         &trans  &trans          &trans         &trans         &trans           &trans   &trans
+&trans  &kp F1        &kp F2        &kp F3        &kp F4        &kp F5        &trans                                         &none   &kp F6          &kp F7         &kp F8         &kp F9           &kp F10  &kp F11
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &trans  &trans  &trans      &trans     &trans  &trans  &mm_left        &mm_down       &mm_up         &mm_right        &trans   &kp F12
+&trans  &kp NUMBER_6  &kp NUMBER_7  &kp N8        &kp NUMBER_9  &kp NUMBER_0                  &trans      &trans                     &mm_click_left  &mm_scroll_dn  &mm_scroll_up  &mm_click_right  &trans   &trans
+&trans  &trans        &trans        &trans        &trans                      &trans  &trans  &trans      &kp RSHFT  &trans  &trans                  &trans         &trans         &trans           &trans   &trans
             >;
         };
 
