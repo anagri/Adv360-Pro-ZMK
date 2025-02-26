@@ -42,7 +42,7 @@
             bindings = <&kp LEFT>, <&mmv MOVE_LEFT>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RALT)>;
+            mods = <(MOD_RSFT)>;
         };
 
         mm_right: mm_right {
@@ -51,7 +51,7 @@
             bindings = <&kp RIGHT>, <&mmv MOVE_RIGHT>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RALT)>;
+            mods = <(MOD_RSFT)>;
         };
 
         mm_up: mm_up {
@@ -60,7 +60,7 @@
             bindings = <&kp UP_ARROW>, <&mmv MOVE_UP>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RALT)>;
+            mods = <(MOD_RSFT)>;
         };
 
         mm_down: mm_down {
@@ -69,7 +69,7 @@
             bindings = <&kp DOWN_ARROW>, <&mmv MOVE_DOWN>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RALT)>;
+            mods = <(MOD_RSFT)>;
         };
 
         mm_scroll_dn: mm_scroll_dn {
@@ -78,7 +78,7 @@
             bindings = <&kp PAGE_DOWN>, <&msc SCRL_DOWN>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RALT)>;
+            mods = <(MOD_RSFT)>;
         };
 
         mm_scroll_up: mm_scroll_up {
@@ -87,7 +87,7 @@
             bindings = <&kp PG_UP>, <&msc SCRL_UP>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RALT)>;
+            mods = <(MOD_RSFT)>;
         };
     };
 
@@ -108,11 +108,11 @@
         fn {
             display-name = "Fn";
             bindings = <
-&trans  &trans        &trans        &trans        &trans        &trans        &trans                                                &trans    &trans     &trans         &trans         &trans     &trans   &trans
-&trans  &kp F1        &kp F2        &kp F3        &kp F4        &kp F5        &trans                                                &none     &kp F6     &kp F7         &kp F8         &kp F9     &kp F10  &kp F11
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &trans  &trans  &trans      &trans     &trans         &kp HOME  &mm_left   &mm_down       &mm_up         &mm_right  &kp END  &kp F12
-&trans  &kp NUMBER_6  &kp NUMBER_7  &kp N8        &kp NUMBER_9  &kp NUMBER_0                  &trans      &trans                              &mkp LCLK  &mm_scroll_dn  &mm_scroll_up  &mkp RCLK  &trans   &trans
-&trans  &trans        &trans        &trans        &trans                      &trans  &trans  &trans      &kp RSHFT  &kp RIGHT_ALT  &trans               &trans         &trans         &trans     &trans   &trans
+&trans  &trans        &trans        &trans        &trans        &trans        &trans                                         &trans    &trans     &trans         &trans         &trans     &trans   &trans
+&trans  &kp F1        &kp F2        &kp F3        &kp F4        &kp F5        &trans                                         &none     &kp F6     &kp F7         &kp F8         &kp F9     &kp F10  &kp F11
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &trans  &trans  &trans      &trans     &trans  &kp HOME  &mm_left   &mm_down       &mm_up         &mm_right  &kp END  &kp F12
+&trans  &kp NUMBER_6  &kp NUMBER_7  &kp N8        &kp NUMBER_9  &kp NUMBER_0                  &trans      &trans                       &mkp LCLK  &mm_scroll_dn  &mm_scroll_up  &mkp RCLK  &trans   &trans
+&trans  &trans        &trans        &trans        &trans                      &trans  &trans  &trans      &kp RSHFT  &trans  &trans               &trans         &trans         &trans     &trans   &trans
             >;
         };
 
