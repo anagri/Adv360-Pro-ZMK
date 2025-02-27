@@ -42,7 +42,7 @@
             bindings = <&kp LEFT>, <&mmv MOVE_X(-300)>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
         mm_right: mm_right {
@@ -51,7 +51,7 @@
             bindings = <&hm RCTRL RIGHT>, <&mmv MOVE_X(300)>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
         mm_up: mm_up {
@@ -60,7 +60,7 @@
             bindings = <&hm RIGHT_ALT UP_ARROW>, <&mmv MOVE_Y(-300)>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
         mm_down: mm_down {
@@ -69,7 +69,7 @@
             bindings = <&hm_shift RIGHT_SHIFT DOWN_ARROW>, <&mmv MOVE_Y(300)>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
         mm_scroll_dn: mm_scroll_dn {
