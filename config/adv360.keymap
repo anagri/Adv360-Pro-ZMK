@@ -98,6 +98,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LALT|MOD_RALT)>;
         };
+
+        f10_vol_up: f10_vol_up {
+            compatible = "zmk,behavior-mod-morph";
+            label = "F10_VOL_UP";
+            bindings = <&kp F10>, <&kp C_VOLUME_UP>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+        };
     };
 
     keymap {
@@ -118,7 +127,7 @@
             display-name = "Fn";
             bindings = <
 &trans  &trans             &trans        &trans        &trans              &trans        &trans                                      &trans    &trans         &trans     &trans     &trans       &trans            &trans
-&trans  &kp F1             &kp F2        &kp F3        &kp F4              &kp F5        &trans                                      &none     &kp F6         &kp F7     &kp F8     &kp F9       &kp F10           &kp F11
+&trans  &kp F1             &kp F2        &kp F3        &kp F4              &kp F5        &trans                                      &none     &kp F6         &kp F7     &kp F8     &kp F9       &f10_vol_up       &kp F11
 &trans  &hm LGUI NUMBER_1  &hm LALT N2   &hm LCTRL N3  &hm_shift LSHFT N4  &kp NUMBER_5  &trans  &trans  &trans      &trans  &trans  &kp HOME  &mm_left       &mm_down   &mm_up     &mm_right    &hm LEFT_GUI END  &kp F12
 &trans  &kp NUMBER_6       &kp NUMBER_7  &kp N8        &kp NUMBER_9        &kp NUMBER_0                  &trans      &trans                    &kp PAGE_DOWN  &mkp LCLK  &mkp RCLK  &kp PAGE_UP  &trans            &trans
 &trans  &trans             &trans        &trans        &trans                            &trans  &trans  &trans      &trans  &trans  &trans                   &trans     &trans     &trans       &trans            &trans
