@@ -99,10 +99,55 @@
             mods = <(MOD_LALT|MOD_RALT)>;
         };
 
-        f10_vol_up: f10_vol_up {
+        f10_vol_dn: f10_vol_dn {
             compatible = "zmk,behavior-mod-morph";
-            label = "F10_VOL_UP";
-            bindings = <&kp F10>, <&kp K_VOLUME_UP>;
+            label = "F10_VOL_DN";
+            bindings = <&kp F10>, <&kp C_VOLUME_DOWN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+        };
+
+        f11_vol_up: f11_vol_up {
+            compatible = "zmk,behavior-mod-morph";
+            label = "F11_VOL_UP";
+            bindings = <&kp F11>, <&kp C_VOLUME_UP>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+        };
+
+        f9_vol_mute: f9_vol_mute {
+            compatible = "zmk,behavior-mod-morph";
+            label = "F9_VOL_MUTE";
+            bindings = <&kp F9>, <&kp C_MUTE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+        };
+
+        f8_ffwd: f8_ffwd {
+            compatible = "zmk,behavior-mod-morph";
+            label = "F8_FFWD";
+            bindings = <&kp F8>, <&kp C_FF>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+        };
+
+        f7_pp: f7_pp {
+            compatible = "zmk,behavior-mod-morph";
+            label = "F7_PP";
+            bindings = <&kp F7>, <&kp C_PP>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+        };
+
+        f6_rw: f6_rw {
+            compatible = "zmk,behavior-mod-morph";
+            label = "F6_RW";
+            bindings = <&kp F6>, <&kp C_RW>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT|MOD_RALT)>;
@@ -126,11 +171,11 @@
         fn {
             display-name = "Fn";
             bindings = <
-&kp C_REWIND        &kp C_PLAY         &kp K_PLAY_PAUSE  &kp C_PLAY_PAUSE  &kp K_MUTE          &kp C_MUTE    &kp K_MUTE2                                      &kp K_VOLUME_DOWN  &kp K_VOLUME_DOWN2  &kp C_VOLUME_DOWN  &kp K_VOLUME_UP2  &kp C_VOLUME_UP  &kp K_VOLUME_UP   &trans
-&kp C_FAST_FORWARD  &kp F1             &kp F2            &kp F3            &kp F4              &kp F5        &trans                                           &none              &kp F6              &kp F7             &kp F8            &kp F9           &f10_vol_up       &kp F11
-&kp C_PREVIOUS      &hm LGUI NUMBER_1  &hm LALT N2       &hm LCTRL N3      &hm_shift LSHFT N4  &kp NUMBER_5  &trans       &trans  &trans      &trans  &trans  &kp HOME           &mm_left            &mm_down           &mm_up            &mm_right        &hm LEFT_GUI END  &kp F12
-&trans              &kp NUMBER_6       &kp NUMBER_7      &kp N8            &kp NUMBER_9        &kp NUMBER_0                       &trans      &trans                             &kp PAGE_DOWN       &mkp LCLK          &mkp RCLK         &kp PAGE_UP      &trans            &trans
-&trans              &trans             &trans            &trans            &trans                            &trans       &trans  &trans      &trans  &trans  &trans                                 &trans             &trans            &trans           &trans            &trans
+&trans  &trans             &trans        &trans        &trans              &trans        &trans                                      &trans    &trans         &trans     &trans     &trans        &trans            &trans
+&trans  &kp F1             &kp F2        &kp F3        &kp F4              &kp F5        &trans                                      &none     &f6_rw         &f7_pp     &f8_ffwd   &f9_vol_mute  &f10_vol_dn       &f11_vol_up
+&trans  &hm LGUI NUMBER_1  &hm LALT N2   &hm LCTRL N3  &hm_shift LSHFT N4  &kp NUMBER_5  &trans  &trans  &trans      &trans  &trans  &kp HOME  &mm_left       &mm_down   &mm_up     &mm_right     &hm LEFT_GUI END  &kp F12
+&trans  &kp NUMBER_6       &kp NUMBER_7  &kp N8        &kp NUMBER_9        &kp NUMBER_0                  &trans      &trans                    &kp PAGE_DOWN  &mkp LCLK  &mkp RCLK  &kp PAGE_UP   &trans            &trans
+&trans  &trans             &trans        &trans        &trans                            &trans  &trans  &trans      &trans  &trans  &trans                   &trans     &trans     &trans        &trans            &trans
             >;
         };
 
