@@ -39,7 +39,7 @@
         mm_left: mm_left {
             compatible = "zmk,behavior-mod-morph";
             label = "MM_LEFT";
-            bindings = <&kp LEFT>, <&mmv MOVE_X(300)>;
+            bindings = <&kp LEFT>, <&mmv MOVE_X(-300)>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT)>;
@@ -48,7 +48,7 @@
         mm_right: mm_right {
             compatible = "zmk,behavior-mod-morph";
             label = "MM_RIGHT";
-            bindings = <&kp RIGHT>, <&mmv MOVE_X(-300)>;
+            bindings = <&kp RIGHT>, <&mmv MOVE_X(300)>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT)>;
@@ -57,7 +57,7 @@
         mm_up: mm_up {
             compatible = "zmk,behavior-mod-morph";
             label = "MM_UP";
-            bindings = <&kp UP_ARROW>, <&mmv MOVE_Y(300)>;
+            bindings = <&kp UP_ARROW>, <&mmv MOVE_Y(-300)>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT)>;
@@ -66,7 +66,7 @@
         mm_down: mm_down {
             compatible = "zmk,behavior-mod-morph";
             label = "MM_DOWN";
-            bindings = <&kp DOWN_ARROW>, <&mmv MOVE_Y(-300)>;
+            bindings = <&kp DOWN_ARROW>, <&mmv MOVE_Y(300)>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT)>;
