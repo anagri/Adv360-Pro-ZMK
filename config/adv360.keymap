@@ -102,7 +102,7 @@
         f10_vol_up: f10_vol_up {
             compatible = "zmk,behavior-mod-morph";
             label = "F10_VOL_UP";
-            bindings = <&kp F10>, <&kp C_VOLUME_UP>;
+            bindings = <&kp F10>, <&kp K_VOLUME_UP>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT|MOD_RALT)>;
