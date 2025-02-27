@@ -39,7 +39,7 @@
         mm_left: mm_left {
             compatible = "zmk,behavior-mod-morph";
             label = "MM_LEFT";
-            bindings = <&kp LEFT>, <&mmv MOVE_LEFT>;
+            bindings = <&kp LEFT>, <&mmv MOVE_X(-300)>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT)>;
@@ -48,7 +48,7 @@
         mm_right: mm_right {
             compatible = "zmk,behavior-mod-morph";
             label = "MM_RIGHT";
-            bindings = <&kp RIGHT>, <&mmv MOVE_RIGHT>;
+            bindings = <&kp RIGHT>, <&mmv MOVE_X(300)>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT)>;
@@ -57,7 +57,7 @@
         mm_up: mm_up {
             compatible = "zmk,behavior-mod-morph";
             label = "MM_UP";
-            bindings = <&kp UP_ARROW>, <&mmv MOVE_UP>;
+            bindings = <&kp UP_ARROW>, <&mmv MOVE_Y(300)>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT)>;
@@ -66,7 +66,7 @@
         mm_down: mm_down {
             compatible = "zmk,behavior-mod-morph";
             label = "MM_DOWN";
-            bindings = <&kp DOWN_ARROW>, <&mmv MOVE_DOWN>;
+            bindings = <&kp DOWN_ARROW>, <&mmv MOVE_Y(-300)>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT)>;
@@ -108,11 +108,11 @@
         fn {
             display-name = "Fn";
             bindings = <
-&trans  &trans        &trans        &trans        &trans        &trans        &trans                                         &trans    &trans     &trans         &trans         &trans     &trans   &trans
-&trans  &kp F1        &kp F2        &kp F3        &kp F4        &kp F5        &trans                                         &none     &kp F6     &kp F7         &kp F8         &kp F9     &kp F10  &kp F11
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &trans  &trans  &trans      &trans     &trans  &kp HOME  &mm_left   &mm_down       &mm_up         &mm_right  &kp END  &kp F12
-&trans  &kp NUMBER_6  &kp NUMBER_7  &kp N8        &kp NUMBER_9  &kp NUMBER_0                  &trans      &trans                       &mkp LCLK  &mm_scroll_dn  &mm_scroll_up  &mkp RCLK  &trans   &trans
-&trans  &trans        &trans        &trans        &trans                      &trans  &trans  &trans      &kp RSHFT  &trans  &trans               &trans         &trans         &trans     &trans   &trans
+&trans  &trans        &trans        &trans        &trans        &trans        &trans                                         &trans    &trans         &trans     &trans     &trans       &trans   &trans
+&trans  &kp F1        &kp F2        &kp F3        &kp F4        &kp F5        &trans                                         &none     &kp F6         &kp F7     &kp F8     &kp F9       &kp F10  &kp F11
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &trans  &trans  &trans      &trans     &trans  &kp HOME  &mm_left       &mm_down   &mm_up     &mm_right    &kp END  &kp F12
+&trans  &kp NUMBER_6  &kp NUMBER_7  &kp N8        &kp NUMBER_9  &kp NUMBER_0                  &trans      &trans                       &kp PAGE_DOWN  &mkp LCLK  &mkp RCLK  &kp PAGE_UP  &trans   &trans
+&trans  &trans        &trans        &trans        &trans                      &trans  &trans  &trans      &kp RSHFT  &trans  &trans                   &trans     &trans     &trans       &trans   &trans
             >;
         };
 
