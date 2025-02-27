@@ -86,7 +86,7 @@
             bindings = <&kp F10>, <&kp C_VOLUME_DOWN>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LALT|MOD_RALT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         f11_vol_up: f11_vol_up {
@@ -95,7 +95,7 @@
             bindings = <&kp F11>, <&kp C_VOLUME_UP>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LALT|MOD_RALT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         f9_vol_mute: f9_vol_mute {
@@ -104,7 +104,7 @@
             bindings = <&kp F9>, <&kp C_MUTE>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LALT|MOD_RALT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         f8_ffwd: f8_ffwd {
@@ -113,7 +113,7 @@
             bindings = <&kp F8>, <&kp C_FF>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LALT|MOD_RALT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         f7_pp: f7_pp {
@@ -122,7 +122,7 @@
             bindings = <&kp F7>, <&kp C_PP>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LALT|MOD_RALT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         f6_rw: f6_rw {
@@ -131,7 +131,7 @@
             bindings = <&kp F6>, <&kp C_RW>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LALT|MOD_RALT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
 
@@ -154,7 +154,7 @@
             bindings = <
 &trans  &trans             &trans        &trans        &trans              &trans        &trans                                      &trans    &trans         &trans     &trans     &trans        &trans            &trans
 &trans  &kp F1             &kp F2        &kp F3        &kp F4              &kp F5        &trans                                      &none     &f6_rw         &f7_pp     &f8_ffwd   &f9_vol_mute  &f10_vol_dn       &f11_vol_up
-&trans  &hm LGUI NUMBER_1  &hm LALT N2   &hm LCTRL N3  &hm_shift LSHFT N4  &kp NUMBER_5  &trans  &trans  &trans      &trans  &trans  &kp HOME  &mm_left       &mm_down   &mm_up     &mm_right     &hm LEFT_GUI END  &kp F12
+&trans  &hm LGUI NUMBER_1  &hm LALT N2   &hm LCTRL N3  &hm_shift LSHFT N4  &kp NUMBER_5  &gresc  &trans  &trans      &trans  &trans  &kp HOME  &mm_left       &mm_down   &mm_up     &mm_right     &hm LEFT_GUI END  &kp F12
 &trans  &kp NUMBER_6       &kp NUMBER_7  &kp N8        &kp NUMBER_9        &kp NUMBER_0                  &trans      &trans                    &kp PAGE_DOWN  &mkp LCLK  &mkp RCLK  &kp PAGE_UP   &trans            &trans
 &trans  &trans             &trans        &trans        &trans                            &trans  &trans  &trans      &trans  &trans  &trans                   &trans     &trans     &trans        &trans            &trans
             >;
