@@ -71,15 +71,6 @@
             mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
-        morph_curly: morph_curly {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MORPH_CURLY";
-            bindings = <&kp LEFT_BRACE>, <&kp RIGHT_BRACE>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
         f9_vol_dn: f9_vol_dn {
             compatible = "zmk,behavior-mod-morph";
             label = "F9_VOL_DN";
