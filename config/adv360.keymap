@@ -107,33 +107,6 @@
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
 
-        f7_ffwd: f7_ffwd {
-            compatible = "zmk,behavior-mod-morph";
-            label = "F7_FFWD";
-            bindings = <&kp F7>, <&kp C_FF>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_RCTL)>;
-        };
-
-        f6_pp: f6_pp {
-            compatible = "zmk,behavior-mod-morph";
-            label = "F6_PP";
-            bindings = <&kp F6>, <&kp C_PP>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_RCTL)>;
-        };
-
-        f_rw: f_rw {
-            compatible = "zmk,behavior-mod-morph";
-            label = "F_RW";
-            bindings = <&trans>, <&kp C_RW>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_RCTL)>;
-        };
-
         mm_right_click: mm_right_click {
             compatible = "zmk,behavior-mod-morph";
             label = "MM_RIGHT_CLICK";
@@ -171,7 +144,7 @@
             display-name = "Fn";
             bindings = <
 &trans  &trans             &trans        &trans        &trans              &trans        &trans                                      &trans    &trans    &trans          &trans           &trans      &trans            &trans
-&trans  &kp F1             &kp F2        &kp F3        &kp F4              &kp F5        &trans                                      &kp C_PP  &f6_pp    &f7_ffwd        &f8_vol_mute     &f9_vol_dn  &f10_vol_up       &kp F11
+&trans  &kp F1             &kp F2        &kp F3        &kp F4              &kp F5        &trans                                      &kp C_PP  &kp F6    &kp F7          &f8_vol_mute     &f9_vol_dn  &f10_vol_up       &kp F11
 &trans  &hm LGUI NUMBER_1  &hm LALT N2   &hm LCTRL N3  &hm_shift LSHFT N4  &kp NUMBER_5  &gresc  &trans  &trans      &trans  &trans  &kp HOME  &mm_left  &mm_down        &mm_up           &mm_right   &hm LEFT_GUI END  &kp F12
 &trans  &kp NUMBER_6       &kp NUMBER_7  &kp N8        &kp NUMBER_9        &kp NUMBER_0                  &trans      &trans                    &trans    &mm_left_click  &mm_right_click  &trans      &trans            &trans
 &trans  &trans             &trans        &trans        &trans                            &trans  &trans  &trans      &trans  &trans  &trans              &trans          &trans           &trans      &trans            &trans
