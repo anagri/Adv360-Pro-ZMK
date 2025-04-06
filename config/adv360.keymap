@@ -38,6 +38,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "MM_LEFT_INNER";
             bindings = <&kp LEFT>, <&mmv MOVE_X(-300)>;
+
             #binding-cells = <0>;
             mods = <(MOD_LGUI)>;
         };
@@ -46,6 +47,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "MM_RIGHT_INNER";
             bindings = <&hm RALT RIGHT>, <&mmv MOVE_X(300)>;
+
             #binding-cells = <0>;
             mods = <(MOD_LGUI)>;
         };
@@ -54,6 +56,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "MM_UP_INNER";
             bindings = <&hm RCTRL UP_ARROW>, <&mmv MOVE_Y(-300)>;
+
             #binding-cells = <0>;
             mods = <(MOD_LGUI)>;
         };
@@ -62,6 +65,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "MM_DOWN_INNER";
             bindings = <&hm_shift RIGHT_SHIFT DOWN_ARROW>, <&mmv MOVE_Y(300)>;
+
             #binding-cells = <0>;
             mods = <(MOD_LGUI)>;
         };
@@ -70,6 +74,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "MM_LEFT";
             bindings = <&kp LEFT>, <&mm_left_inner>;
+
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
         };
@@ -78,6 +83,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "MM_RIGHT";
             bindings = <&hm RALT RIGHT>, <&mm_right_inner>;
+
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
         };
@@ -86,6 +92,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "MM_UP";
             bindings = <&hm RCTRL UP_ARROW>, <&mm_up_inner>;
+
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
         };
@@ -94,6 +101,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "MM_DOWN";
             bindings = <&hm_shift RIGHT_SHIFT DOWN_ARROW>, <&mm_down_inner>;
+
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
         };
@@ -197,6 +205,16 @@
         combo_quotes {
             bindings = <&kp SINGLE_QUOTE>;
             key-positions = <58 57>;
+        };
+
+        left-jump {
+            bindings = <&kp LA(LEFT_ARROW)>;
+            key-positions = <68 30 40>;
+        };
+
+        right_jump {
+            bindings = <&kp LA(RIGHT)>;
+            key-positions = <68 30 44>;
         };
     };
 
