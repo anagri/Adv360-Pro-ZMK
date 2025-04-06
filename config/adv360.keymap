@@ -40,7 +40,7 @@
             bindings = <&kp LEFT>, <&mmv MOVE_X(-300)>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LALT|MOD_RALT)>;
+            mods = <(MOD_LALT|MOD_LGUI)>;
         };
 
         mm_right: mm_right {
@@ -49,7 +49,7 @@
             bindings = <&hm RALT RIGHT>, <&mmv MOVE_X(300)>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LALT|MOD_RALT)>;
+            mods = <(MOD_LALT|MOD_LGUI)>;
         };
 
         mm_up: mm_up {
@@ -58,7 +58,7 @@
             bindings = <&hm RCTRL UP_ARROW>, <&mmv MOVE_Y(-300)>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LALT|MOD_RALT)>;
+            mods = <(MOD_LALT|MOD_LGUI)>;
         };
 
         mm_down: mm_down {
@@ -67,7 +67,7 @@
             bindings = <&hm_shift RIGHT_SHIFT DOWN_ARROW>, <&mmv MOVE_Y(300)>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LALT|MOD_RALT)>;
+            mods = <(MOD_LALT|MOD_LGUI)>;
         };
 
         f9_vol_dn: f9_vol_dn {
