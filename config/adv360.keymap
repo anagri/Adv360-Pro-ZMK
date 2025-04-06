@@ -206,16 +206,6 @@
             bindings = <&kp SINGLE_QUOTE>;
             key-positions = <58 57>;
         };
-
-        left-jump {
-            bindings = <&kp LA(LEFT_ARROW)>;
-            key-positions = <68 30 40>;
-        };
-
-        right_jump {
-            bindings = <&kp LA(RIGHT)>;
-            key-positions = <68 30 44>;
-        };
     };
 
     keymap {
