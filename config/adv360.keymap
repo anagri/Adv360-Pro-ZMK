@@ -242,11 +242,11 @@
         fn {
             display-name = "Fn";
             bindings = <
-&trans  &trans             &trans        &trans        &trans              &trans        &trans                                      &trans    &trans    &trans          &trans           &trans      &trans            &trans
-&trans  &kp F1             &kp F2        &kp F3        &kp F4              &kp F5        &trans                                      &kp C_PP  &kp F6    &kp F7          &f8_vol_mute     &f9_vol_dn  &f10_vol_up       &kp F11
-&trans  &hm LGUI NUMBER_1  &hm LALT N2   &hm LCTRL N3  &hm_shift LSHFT N4  &kp NUMBER_5  &gresc  &trans  &trans      &trans  &trans  &kp HOME  &mm_left  &mm_down        &mm_up           &mm_right   &hm LEFT_GUI END  &kp F12
-&trans  &kp NUMBER_6       &kp NUMBER_7  &kp N8        &kp NUMBER_9        &kp NUMBER_0                  &trans      &trans                    &trans    &mm_left_click  &mm_right_click  &trans      &trans            &trans
-&trans  &trans             &trans        &trans        &trans                            &trans  &trans  &trans      &trans  &trans  &trans              &trans          &trans           &trans      &trans            &trans
+&trans  &trans             &trans        &trans        &trans              &trans        &trans                                      &trans    &trans        &trans          &trans           &trans         &trans            &trans
+&trans  &kp F1             &kp F2        &kp F3        &kp F4              &kp F5        &trans                                      &kp C_PP  &kp F6        &kp F7          &f8_vol_mute     &f9_vol_dn     &f10_vol_up       &kp F11
+&trans  &hm LGUI NUMBER_1  &hm LALT N2   &hm LCTRL N3  &hm_shift LSHFT N4  &kp NUMBER_5  &gresc  &trans  &trans      &trans  &trans  &kp HOME  &mm_left      &mm_down        &mm_up           &mm_right      &hm LEFT_GUI END  &kp F12
+&trans  &kp NUMBER_6       &kp NUMBER_7  &kp N8        &kp NUMBER_9        &kp NUMBER_0                  &trans      &trans                    &kp RC(LEFT)  &mm_left_click  &mm_right_click  &kp RC(RIGHT)  &trans            &trans
+&trans  &trans             &trans        &trans        &trans                            &trans  &trans  &trans      &trans  &trans  &trans                  &trans          &trans           &trans         &trans            &trans
             >;
         };
     };
