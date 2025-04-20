@@ -16,7 +16,6 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
 
-            hold-trigger-key-positions = <36 37 38 39 40 41 42 43 44 45>;
             quick-tap-ms = <250>;
             hold-trigger-on-release;
         };
@@ -35,7 +34,7 @@
         mm_left_inner: mm_left_inner {
             compatible = "zmk,behavior-mod-morph";
             label = "MM_LEFT_INNER";
-            bindings = <&kp LA(LEFT)>, <&mmv MOVE_X(-300)>;
+            bindings = <&kp LEFT>, <&mmv MOVE_X(-300)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI)>;
@@ -44,7 +43,7 @@
         mm_right_inner: mm_right_inner {
             compatible = "zmk,behavior-mod-morph";
             label = "MM_RIGHT_INNER";
-            bindings = <&kp LA(RIGHT)>, <&mmv MOVE_X(300)>;
+            bindings = <&hm RALT RIGHT>, <&mmv MOVE_X(300)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI)>;
@@ -53,7 +52,7 @@
         mm_up_inner: mm_up_inner {
             compatible = "zmk,behavior-mod-morph";
             label = "MM_UP_INNER";
-            bindings = <&kp LA(UP)>, <&mmv MOVE_Y(-300)>;
+            bindings = <&hm RCTRL UP_ARROW>, <&mmv MOVE_Y(-300)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI)>;
@@ -62,7 +61,7 @@
         mm_down_inner: mm_down_inner {
             compatible = "zmk,behavior-mod-morph";
             label = "MM_DOWN_INNER";
-            bindings = <&kp LA(DOWN)>, <&mmv MOVE_Y(300)>;
+            bindings = <&hm_shift RIGHT_SHIFT DOWN_ARROW>, <&mmv MOVE_Y(300)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI)>;
@@ -75,7 +74,6 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
-            keep-mods = <(MOD_LALT)>;
         };
 
         mm_right: mm_right {
@@ -85,7 +83,6 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
-            keep-mods = <(MOD_LALT)>;
         };
 
         mm_up: mm_up {
@@ -95,7 +92,6 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
-            keep-mods = <(MOD_LALT)>;
         };
 
         mm_down: mm_down {
@@ -105,7 +101,6 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
-            keep-mods = <(MOD_LALT)>;
         };
 
         f9_vol_dn: f9_vol_dn {
